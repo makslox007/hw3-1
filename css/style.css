@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+background-color: rgb(21, 21, 21);
+  
+}
+
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 250px;
+  height: 250px;
+
+  font-size: 100px;
+
+  border-radius: 50%;
+  background-color: rgb(0, 255, 13);
+  cursor: pointer;
+
+  animation: circle 2s linear infinite;
+}
+
+i {
+  animation: phone 2s ease-out infinite alternate;
+}
+
+.phone:hover i {
+  animation: none;
+}
+
+@keyframes circle {
+  0% {
+    box-shadow: 0 0 2px rgba(129, 206, 231, 0.726),
+      0 0 2px 10px rgba(129, 206, 231, 0.529);
+  }
+  50% {
+    box-shadow: 0 0 2px 15px rgba(129, 206, 231, 0.471),
+      0 0 2px 40px rgba(129, 206, 231, 0.188);
+  }
+  100% {
+    box-shadow: 0 0 2px 45px rgba(129, 206, 231, 0.055),
+      0 0 2px 60px rgba(129, 206, 231, 0);
+  }
+}
+
+@keyframes phone {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
